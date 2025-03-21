@@ -89,12 +89,12 @@ The repository includes:
     │   ├── active_learning_batch_6.ipynb
     │   └── active_learning_batch_7.ipynb
     ├── manuscript-plots
-    │   ├── matern_batch2.pkl
-    │   ├── pairwise_batch2.pkl
-    │   ├── rbf-ess_batch2.pkl
-    │   └── rq_batch2.pkl
-    ├── screening
-        ├── matern_batch2.pkl
+    │   ├── functional_group_classification.ipynb
+    │   ├── t-SNE_plot.ipynb
+    │   └── shap_analysis.ipynb
+    └── screening
+        ├── screen_emolecules_database.ipynb
+        └── screen_pubchem_database.ipynb
 ```
 
 ## Datasets
