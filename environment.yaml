@@ -1,0 +1,25 @@
+name: al_afb
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9.12
+  - pip
+  - Babel
+  - dask
+  - ipykernel
+  - ipython
+  - ipywidgets
+  - jupyter
+  - jupyterlab
+  - numpy
+  - openTSNE
+  - optuna
+  - pandas
+  - PubChemPy
+  - rdkit
+  - scikit-learn
+  - scipy
+  - seaborn
+  - shap
+  - thermo
