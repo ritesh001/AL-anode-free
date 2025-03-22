@@ -41,7 +41,6 @@ The repository includes:
 │   │   ├── top_5000_suggestions_batch7_uniq_solvents_EI.csv
 │   │   ├── top_5000_suggestions_batch7_uniq_solvents_greedy.csv
 │   │   └── virtual_search_space_for_batch7.csv
-│   ├── in-house_label_data.csv
 │   └── virtual_search_space_1million.csv
 ├── models
 │   ├── batch-1
@@ -100,18 +99,15 @@ The repository includes:
 ## Datasets
 The following datasets are used in this project:
 
-1. **In-house dataset**
-   - File `in-house_label_data.csv` inside the directory `datasets`: this is the initial labeled dataset used for training surrogate models. The Jupyter notebook contains description for columns of features and target variable.
-
-2. **Virtual chemical search space**
+1. **Virtual chemical search space**
    - File `virtual_search_space_1million.csv` inside the directory `datasets`: this is the original virtual search space containing 1 million electrolytes on which optimization is carried in this work.
    - Files named `virtual_search_space_for_batch*.csv` inside the directory `datasets/batch-*`: virtual search space for each subsequent active learnign campaign will be effectively the labeled electrolytes removed from the original search space. Therefore, different files are required for each batch.
    - These files are not present in the GitHub repo as they are ~500 MB in size while GitHub only allows uploads upto 25 MB in size. They can be downloaded from [Box](https://uchicago.box.com/s/j1y6f74vfpnylpnm25nfe3k3onj9bz22) and then kept inside respective directories.
 
-3. **Labeled datasets**
-   - Files named `label_data_post_batch*.csv` inside the directory `datasets/batch-*`: labeled datasets used for training surrogate models in each batch (from batch 2 onwards).
+2. **Labeled datasets**
+   - Files named `label_data_batch*.csv` inside the directory `datasets/batch-*`: labeled datasets obtained from preceding batches (used for training surrogate models in each batch along with in-house data) (from batch 2 onwards).
 
-4. **Top 5000/1000 suggested datasets** 
+3. **Top 5000/1000 suggested datasets** 
    - Files named `top_5000_suggestions_batch*_uniq_solvents.csv` or `top_10000_suggestions_batch*_uniq_solvents.csv`: these files contain unique solvent combinations from top 5000 or 10000 suggestions by the active learning framework in each batch. These were fed to the eMolecules repository to manually find purchasable candidates.
 
 ## Notebooks
